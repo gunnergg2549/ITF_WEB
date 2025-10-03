@@ -1,0 +1,14 @@
+nav {
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    margin: 0;
+}
+.container {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+}
