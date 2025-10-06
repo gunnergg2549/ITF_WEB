@@ -4,32 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ITF Web</title>
-    <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <nav>
         <p>68070005</p>
         <h2>ITF Website</h2>
         <p>Week 14</p>
-        </nav>
-        <div class = "container">
-            <img src = "ITFLab_res14/Emoji-Meme-PNG-Pic.png" width="300" height="200">
-            <h1>ITF Not Simple Bank</h1>
-            <br><label>Hello</label>
+    </nav>
+
+    <div class="section">
+        <div class="main-title">
+            <!-- โลโก้ -->
+            <img src="ITFLab_res14/Emoji-Meme-PNG-Pic.png" width="150" height="150">
+            <h2>ITF Simple Bank</h2>
         </div>
-        <h1>Account Overview</h1>
-        <div class="container">
-            <img src="ITFLab_res14/user.png" width="90" height="90">
-            <h2>Account Information</h2>
-            <label>Name: Who</label>
-            <br><label>Type: Saving Account</label>
+
+            <!-- Transaction History -->
+            <div class="section">
+                <div class="section-title">
+                    <img src="ITFLab_res14/banknote.png" alt="history icon">
+                    <h3>Transaction History</h3>
+                </div>
+                <textarea id="history" readonly></textarea>
         </div>
-        <div class = "container">
-            <img src="ITFLab_res14/briefcase.png" width="90" height="90">
-            <h2>Balance Information</h2>
+
+        <!-- Account Overview -->
+        <div class="section">
+            <div class="section-title">
+                <img src="ITFLab_res14/user.png" alt="account icon">
+                <h3>Account Overview</h3>
+            </div>
+            <p>Name: Kritsada Pratumma</p>
+            <p>Type: Savings Account</p>
         </div>
-        <script src="script.js"></script>
-        Enter number: <input type = "n" id = "myinput" value="0" maxlength="10">
-            <button onclick="add()">+1</button>
+
+        <!-- Balance Information -->
+        <div class="section">
+            <div class="section-title">
+                <img src="ITFLab_res14/briefcase.png" alt="Bank info icon">
+                <h3>Balance Information</h3>
+            </div>
+            <label>Current account balance: </label>
+            <input type="text" id="inputAccount" value="1000" readonly><br><br>
+
+            <label>Current cash balance: </label>
+            <input type="text" id="inputCash" value="1000" readonly><br><br>
+        </div>
+
+        <!-- Bank Operation -->
+        <div class="section">
+            <div class="section-title">
+                <img src="ITFLab_res14/calculator.png" alt="operation icon">
+                <h3>Bank Operation</h3>
+            </div>
+            <input type="number" id="amount" placeholder="Enter amount">
+            <button onclick="deposit()">Deposit</button>
+            <button onclick="withdraw()">Withdraw</button>
+        </div>
+        <div class="section">
+            <div class="section-title">
+                <img src="ITFLab_res14/coins.png" alt="Coint convert">
+                <h3>Financial Tools</h3>
+            </div>
+            <label>input balance: </label><input type="number" id="amount" placeholder="Enter amount">
+            <br><label>output balance: </label><input type="number" id="amount" readonly>
+            <br><label>Input currency: </label>
+            <select name="country" id="country">
+                <option value="USD">USD</option>
+                <option value="THB">THB</option>
+            </select>
+            <button onclick="currency_change()">Convert</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
